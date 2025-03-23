@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true">
+
+    <LinearLayout
+        style="@style/mchV">
+        <TextView
+            android:id="@+id/index_spi_config"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="首次使用，请先进菜单选择SPI管脚配置 ↗"/>
+
+        <Button
+            style="@style/btn"
+            android:text="@string/scan"
+            android:onClick="onScan"/>
+        <TextView
+            style="@style/txt"
+            android:id="@+id/text_blue"
+            android:textColor="#000000"
+            android:text="@string/no_blue"/>
+        <View
+            style="@style/sepL"/>
+
+        <Button
+            android:id= "@+id/Button_disp"
+            style="@style/btn"
+            android:text="@string/disp"
+            android:onClick="onDisplay"/>
+        <TextView
+            style="@style/txt"
+            android:id="@+id/text_disp"
+            android:textColor="#000000"
+            android:text="@string/no_disp"/>
+        <View
+            style="@style/sepL"/>
+
+        <Button
+            style="@style/btn"
+            android:id= "@+id/Button_file"
+            android:text="@string/file"
+            android:onClick="onLoad"/>
+        <!--        &lt;!&ndash; Image Cropper fill the remaining available height &ndash;&gt;-->
+        <!--        <com.canhub.cropper.CropImageView-->
+        <!--            android:id="@+id/cropImageView"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="0dp"/>-->
+        <TextView
+            android:id="@+id/text_file"
+            style="@style/txt"
+            android:layout_height="12dp"
+            android:text="@string/no_pict"
+            android:textColor="#000000"
+            android:visibility="gone" />
+        <ImageView
+            style="@style/txt"
+            android:id="@+id/pict_file"
+            android:scaleType="fitCenter"/>
+        <View
+            style="@style/sepL"/>
+
+
+        <Button
+            style="@style/btn"
+            android:text="@string/filt"
+            android:onClick="onFilter"/>
+        <TextView
+            style="@style/txt"
+            android:id="@+id/text_filt"
+            android:textColor="#000000"
+            android:text="@string/no_filt"/>
+        <ImageView
+            style="@style/txt"
+            android:id="@+id/pict_filt" android:scaleType="fitCenter"/>
+        <View
+            style="@style/sepL"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/is_compress"
+                android:layout_marginLeft="10dp"
+                android:text="压缩发送"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/send_info"
+                android:layout_marginLeft="20dp"
+                android:text=""/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+            <!--            android:weightSum="1">-->
+
+            <Button
+                android:id="@+id/btn_upload_bt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/bt"
+                android:enabled="false"
+                android:onClick="onUploadBt"
+                android:text="蓝牙上传" />
+
+            <Button
+                android:id="@+id/btn_upload_wifi"
+                android:text="Wifi上传"
+                android:drawableLeft="@drawable/wifi"
+                android:enabled="false"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:onClick="onUploadWifi"/>
+
+            <Button
+                android:id="@+id/btn_load_default"
+                android:text="加载缺省"
+                android:visibility="gone"
+                android:enabled="false"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:onClick="loadDefault"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/upload_text"
+                android:text="0%"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="0.2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <ProgressBar
+                android:id="@+id/upload_progress"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:max="100"
+                android:progress="0"
+                android:layout_weight="0.8"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Device address:   "
+                android:textSize="14dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/device_address"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Connect state:   "
+                android:textSize="14dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/connect_state"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IP address:   "
+                android:textSize="14dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ip_address"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Host name:   "
+                android:textSize="14dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/host_name"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

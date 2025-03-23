@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:layout_marginRight="10dp"
+    android:descendantFocusability="blocksDescendants">
+<!--    添加blocksDescendants，否则包含RadioButton的item点击不生效-->
+
+    <RadioButton
+        android:layout_width="40dp"
+        android:id="@+id/config_select"
+        android:layout_gravity="center_vertical"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/config_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="配置名称"/>
+
+        <TextView
+            android:id="@+id/config_verbose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:text="sck=13, din=14, cs=15, busy=25, rst=26, dc=27"/>
+    </LinearLayout>
+
+<!--    <ImageView-->
+<!--        android:id="@+id/config_menu_sub"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/right_menu"-->
+<!--        android:layout_gravity="center"/>-->
+
+</LinearLayout>

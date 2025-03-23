@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/spi_pin_config"
+        android:icon="@drawable/pin"
+        android:title="管脚配置"/>
+
+    <item android:id="@+id/network_config"
+        android:icon="@drawable/wifi"
+        android:title="网络配置"/>
+
+    <item android:id="@+id/save_image"
+        android:icon="@drawable/image"
+        android:visible="false"
+        android:title="保存图片"/>
+
+    <item android:id="@+id/reboot_device"
+        android:icon="@drawable/reboot"
+        android:title="重启设备"/>
+
+</menu>
