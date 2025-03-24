@@ -1,6 +1,9 @@
 # EPaperLoader-android
- ePaper uploader source files for android APP
+ ePaper loader source files for esp32  
 
+写在前面： 本人代码能力平平，项目仅供参考，欢迎指正
+
+***
 这是 __`墨水屏ESP32无线图传`__ 的安卓程序部分  
 基于微雪电子（waveshare）开源程序的二次开发，加入了一些新的功能：  
 1. 新增几种屏幕面板的支持（参见下方说明）
@@ -18,8 +21,15 @@
 * 9.69 inch e-Paper (B)
 * [7.3 inch e-Paper (E)](https://www.waveshare.net/wiki/7.3inch_e-Paper_HAT_(E) "分辨率：800x480")
 
----
-项目提供了已经打包好的[安卓APP试用包](https://github.com/sunwoods/EPaperLoader-android/blob/main/apk-release/EPaperUploader.apk)（需使用配套的ESP32固件） 
+***
+注意事项：
+* 因为加入了wifi批量数据传输和蓝牙压缩/解压缩功能，所以需要使用带有PSRAM的ESP32单板，否则不能正常运行
+* 12.48b和9.69b因为分别需要使用14根和7根数据线，与其他SPI标准的6根数据线屏幕不兼容，所以SPI管脚的定义在固件代码.h中单独定义，请特别注意
+* 项目提供了已经打包好的[安卓APP试用包](https://github.com/sunwoods/EPaperLoader-android/blob/main/apk-release/EPaperUploader.apk)（需使用配套的ESP32固件） 
 
-附： 界面预览  
+***
+附： APP界面预览  
 <img src="https://github.com/sunwoods/EPaperLoader-android/blob/main/readme-img/img-01.jpg" width="300"/>
+
+墨水屏刷新效果  
+<img src="https://github.com/sunwoods/EPaperLoader-android/blob/main/readme-img/img-02.jpg" width="300"/>
