@@ -97,6 +97,10 @@ public class EPaperDisplay
                     new EPaperDisplay(960,672,8, "9.7 inch e-Paper (G)"),         // 45
                     new EPaperDisplay(960,672,1, "9.69 inch e-Paper (B)"),         // 46
                     new EPaperDisplay(800,480,9, "7.3 inch e-Paper (E)"),         // 47
+                    new EPaperDisplay(176,480,1, "4.37 inch e-Paper (B)"),    // 48
+                    new EPaperDisplay(200,200,0, "1.54 inch e-Paper V2"),      // 49
+                    new EPaperDisplay(960,640,1, "10.2 inch e-Paper (B)"),      // 50
+                    new EPaperDisplay(1448,1072,0, "6.0 inch Parallel"),         // 51
                 }; // index & 0x1 != 0 代表具有彩色
         }
         return array;

@@ -487,6 +487,10 @@ class SocketHandlerWifi extends Handler
 
         Log.e(TAG, "-> imgBWStr:" + imgBWStr.length() + ", imgRStr:" + imgRStr.length());
 
+        if (imgBWStr.length() == 0) {
+            return false;
+        }
+
         Log.e(TAG, String.format("%s", imgBWStr.toString().substring(0, 10)));
 
         // 对12.48屏进行特殊处理
