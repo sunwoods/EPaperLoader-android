@@ -37,3 +37,6 @@
 
 墨水屏刷新效果  
 <img src="https://github.com/sunwoods/EPaperLoader-android/blob/main/readme-img/img-02.jpg" width="300"/>
+
+并口屏刷新效果
+<img src="https://github.com/sunwoods/EPaperLoader-android/blob/main/readme-img/img-03.jpg" width="300"/>
